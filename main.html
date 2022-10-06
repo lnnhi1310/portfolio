@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	    <title>BE DREAMER</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+	    <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bitter&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,600,0,200" />
+	    <style type="text/css">
+            body
+            {
+                overflow-x: hidden;
+                background-color: #d5d0e5;
+            }
+
+            nav
+            {
+                align-items: center;
+	    		position: fixed;
+                list-style: none;
+                justify-content: space-between;
+	    		display: flex;
+	    		width: 100%;
+                height: auto;
+                font-family: 'Delius Unicase', cursive;
+                z-index: 1000;
+            }
+
+            ul
+            {
+                display: flex;
+	    		justify-content: center;
+	    		align-items: center;
+                font-size: 30px;
+                padding-right: 2.5vw;
+            }
+
+            ul li
+            {
+                display: inline-block;
+                margin-left: 0.75vw;
+                margin-top: 1vh;
+            }
+
+            ul li a
+            {
+                text-decoration: none;
+                padding: 10px 20px;
+                color: #42566B;
+            }
+
+            ul li a:hover
+            {
+                text-decoration: none;
+                padding: 10px 20px;
+                color: #42566B;
+                background-color: #d5d0e5;
+                border-radius: 30px;
+            }
+
+            section
+            {
+                position: relative;
+                width: 100%;
+                height: 100vh;
+                padding: 100px;
+            }
+
+            section::before
+            {
+                content:'';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 100px;
+                background: linear-gradient(to top, #d5d0e5, transparent);
+                z-index: 100;
+            }
+
+            section img
+            {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                object-fit: cover;
+            }
+
+            h2
+            {
+                font-family: 'Delius Unicase', cursive;
+                font-size: 40px;
+                color: #454d6f;
+            }
+
+            p
+            {
+                font-size: 20px;
+                font-family: 'Bitter', serif;
+            }
+
+            b
+            {
+                color: #42566B;
+            }
+
+            #headText
+            {
+                top: 15vh;
+                left: 27.5vh;
+                position: absolute;
+                font-size: 8vw;
+                color: bisque;
+                z-index: 1;
+                font-family: 'Delius Unicase', cursive;
+            }
+
+            #girl
+            {
+                z-index: 3;
+            }
+
+            #behindCloud
+            {
+                z-index: 2;
+            }
+
+            #frontCloud
+            {
+                z-index: 5;
+            }
+
+            .line
+            {
+                height:2px;
+                border-width:0;
+                color: gray;
+                background-color: #454d6f;
+            }
+
+            .icon
+            {
+                width: 22px;
+            }
+
+            .col-xs-6 col-md-4
+            {
+                text-align: center;
+            }
+
+            @media only screen and (max-width: 900px)
+            {
+                ul
+                {
+                    font-size: 18px;
+                }
+            }
+
+            @media only screen and (max-width: 600px)
+            {
+                ul
+                {
+                    font-size: 15px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <div style="margin-left: 1vw;">
+                <img src="logo.png" width="100vw" style="z-index: 100;">
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#bout">About</a></li>
+                <li><a href="#wrk">Work</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+
+
+        <section>
+            <img src="bg.jpg" id="stars">
+            <img src="3.png" id="behindCloud">
+            <img src="2.png" id="girl">
+            <h1 id="headText">Be DreAmer</h1>
+            <img src="1.png" id="frontCloud">
+        </section>
+
+        <br><br id="bout"><br><br><br><br><br>
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-5 col-md-5">
+                    <img src="4.png" id="me" width="100%" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-sm-7 col-md-7">
+                    <h2>about <span style="color: #E096A4;">ME</span></h2>
+                    <hr class="line">
+                    <p> ♥ Hi~ my name is <b style="color: #E096A4;">Ly Ngoc Nhi</b>, you can call me <b style="color: #E096A4;">Yii</b>. <br>
+                        ♥ Date of birth: 13/10/2003 <br>
+                        ♥ Sign: Libra <br>
+                        ♥ MBTI: INFP <br><br>
+                        ♡ I have 4 years of experience as a multimedia designer and also, an amateur web developer. I have acquired 
+                        the skills and knowledge of several apps - which necessary to make an astonishing project a success.<br>
+                        ♡ Currently, I am year-2 major in Digital Media at Royal Melbourne Institute of Technology (RMIT).<br>
+                    </p>
+                </div>
+            </div>
+
+            <br><br><br><br><br><br><br id="wrk"><br><br>
+            
+            <h2>mY <span style="color: #E096A4;">Work</span></h2>
+            <div class="row">
+                <div class="col-xs-6 col-md-4">
+                    <a href="starrynight.html" target="_blank" rel="noopener noreferrer"><img src="starrynight.gif" class="img-responsive"></a>
+                    <br>
+                    <a href="thefantasia.html" target="_blank" rel="noopener noreferrer"><img src="A1_3927508 A3.jpg" class="img-responsive"></a>
+                </div>
+                <div class="col-xs-6 col-md-4">
+                    <a href="digitalvideo.html" target="_blank" rel="noopener noreferrer"><img src="dv.PNG" class="img-responsive"></a>
+                    <br><br><br>
+                    <a href="s3927508_A3_LNN/s3927508.html" target="_blank" rel="noopener noreferrer"><img src="promote picture_s3927508.png" class="img-responsive" width="250px"></a>
+                </div>
+                <div class="col-xs-6 col-md-4">
+                    <a href="dms2.html" target="_blank" rel="noopener noreferrer"><img src="cal.png" class="img-responsive"></a>
+                    <br>
+                </div>
+            </div>
+
+            <br><br><br><br><br><br>
+
+            <h2>Let's <span style="color: #E096A4;">con</span>nect</h2>
+            <div>
+                <p><span class="material-symbols-outlined" style="color: #E096A4;">mail</span> ngocnhily.work@gmail.com</p>
+                <p><span class="material-symbols-outlined" style="color: #E096A4;">call</span> +84774144594</p>
+                <p><span class="material-symbols-outlined" style="color: #E096A4;">public</span></p>
+                <p><img src="facebook.png" class="icon"></p>
+                <p><img src="instagram.png" class="icon"></p>
+            </div>
+
+            <footer>
+                <hr class="line">
+                <b>© Copyrighted from owner - Ly Ngoc Nhi</b>
+            </footer>
+        </div>
+
+        
+        <br><br><br><br><br><br>
+
+        <script>
+
+        </script>
+
+    </body>
+</html>
