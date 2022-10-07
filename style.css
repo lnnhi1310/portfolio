@@ -1,0 +1,147 @@
+
+body {
+  background-color: whitesmoke;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  opacity: 100%;
+  color: black;
+}
+
+/* Player (JS controls background images) */
+.player {
+  position: absolute;
+  bottom: 21%;
+  margin-top: -30px;
+  width: 128px;
+  height: 179px;
+  background-color: transparent;
+  }
+
+
+/* Menu Elements */
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#heading {
+  font-size: 90px;
+  visibility: visible;
+  color: #783712;
+  font-weight: 600;
+}
+
+/* Game over alert */
+#gameOver {
+  top: 25vh;
+  color: orange;
+  justify-content: center;
+  text-align: center;
+  font-size: 250px;
+  position: absolute;
+  visibility: hidden;
+}
+
+#inst {
+  bottom: 60%;
+  text-align: center;
+  visibility: visible;
+}
+
+
+
+/* Obstacle (JS creates it by adding it to HTML)*/
+.obstacle {
+  position: absolute;
+  width: 129px;
+  height: 129px;
+  bottom: 21%;
+  background: transparent;
+  background-image: url(obstacle.gif);
+}
+
+
+/* Background*/
+.background1 {
+  position: absolute;
+  bottom: 15%;
+  width: 100%;
+  height: 765px;
+  left: 0%;
+  background-image: url(ground_01.png);
+  background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+  z-index: -2;
+
+}
+
+.background2 {
+  position: absolute;
+  bottom: 15%;
+  width: 100%;
+  height: 765px;
+  left: 100%;
+  background-image: url(ground_02.png);
+  background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+  z-index: -2;
+}
+
+
+/* A parent div controlling both score and highscore */
+.scores {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+
+  text-align: right;
+  width: 90%;
+  font-size: 60px;
+  
+
+}
+
+#highScore {
+
+  font-size: 30px;
+}
+
+
+/* Settings for responsiveness */
+@media screen and (max-width: 800px) 
+  {
+        .text
+        {
+        padding-top: 20%;
+        }
+        #heading 
+        {
+          font-size: 50px;
+        }
+
+        #inst 
+        {
+          font-size: 25px;
+        }
+
+        #highScore 
+        {
+          font-size: 20px;
+        }
+
+        #gameOver
+        {
+          font-size: 100px;
+        }
+
+        .scores 
+        {
+          font-size: 20px;
+        }
+
+  }
