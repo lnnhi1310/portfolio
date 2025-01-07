@@ -154,3 +154,9 @@ img.symMail,
 img.symPhone {
   width: 60px;
 }
+
+@media (max-width: 800px) {
+  nav{
+    top: 88%;
+  }
+}
