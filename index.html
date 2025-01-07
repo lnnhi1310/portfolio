@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link rel="shortcut icon" type="image/x-icon" href="image/favicon.ico.png" />
+        <title>portfoLYo - Home✧˖°</title>
+        <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Music&display=swap" rel="stylesheet"> <!-- font -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,600,0,200" /> <!-- icon -->
+        <link rel="stylesheet" href="style.css"> <!-- link custom CSS -->
+        <style>
+            .void {
+                height: 1080px;
+                width: 100%;
+                background-color: grey;
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav>
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <img src="image/logo.svg" style="height: 60px;">
+                <li><a href="work-gd.html">work</a></li>
+            </ul>
+        </nav>
+        <div class="container-fluid">
+            <div class="void"></div>
+        </div>
+        <div class="marquee" style="margin-top: 80px;">
+            <div class="marquee-content">
+              <img src="image/line.png" alt="Marquee Image">
+              <img src="image/line.png" alt="Marquee Image">
+              <img src="image/line.png" alt="Marquee Image">
+              <img src="image/line.png" alt="Marquee Image">
+              <img src="image/line.png" alt="Marquee Image">
+              <img src="image/line.png" alt="Marquee Image">
+              <img src="image/line.png" alt="Marquee Image">
+              <img src="image/line.png" alt="Marquee Image">
+              <img src="image/line.png" alt="Marquee Image">
+              <img src="image/line.png" alt="Marquee Image">
+            </div>
+        </div>
+
+        <div class="container" style="margin-top: 100px;">
+            <div class="row">
+                <div class="col-xs-12 col-md-5">
+                    <img src="image/nhi.jpg" width="100%" class="img-responsive">
+                </div>
+                <div class="col-xs-12 col-md-7">
+                    <div class="greetingtransition" id="greetingtransition" style="margin-bottom: 30px; margin-top: 30px;">Hello</div>
+                    <p>This is Nhi Ly, a passionate Multimedia Designer with a deep love for creative expression. Throughout my journey, I’ve cultivated a versatile skill set that seamlessly combines technical expertise and artistic creativity. Whether designing striking visuals with Adobe Suite or breathing life into concepts through 3D modeling in Blender, I am committed to crafting designs that resonate and inspire. I’m excited to embrace new challenges and tell meaningful stories through every project I undertake.</p>
+                    <p>Let's check outˏˋ°•*⁀➷</p>
+                    <button type="button" class="btn btn-custom btn-lg" onclick="viewPDF()"  style="margin-left: 200px;">Nhi's CV</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <img src="image/Untitled-1.gif" style="width: 100%;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <h1>Contact</h1>
+                    </div>
+                    <div class="col-xs-12 col-md-6" style="text-align: right;">
+                        <a href=""><img src="image/behance.svg" class="symBehance"></a>
+                        <a href=""><img src="image/website.svg" class="symWebsite"></a>
+                        <a href=""><img src="image/mail.svg" class="symMail"></a>
+                        <a href=""><img src="image/phone.svg" class="symPhone"></a>
+                    </div>    
+                </div>
+                <p style="font-size: 14px; color: aliceblue; padding: 30px; text-align: center;">&#169 Ly Ngoc Nhi, 2025</p>
+            </div>
+        </footer>
+    </body>
+</html>
+
+<script>
+    /* Greeting */
+    const greetings = [
+        "Hello,",        // English
+        "你好,",          // Chinese
+        "Hola,",         // Spanish
+        "Bonjour,",      // French
+        "안녕하세요,",    // Korean
+        "Xin chào,",      // Vietnamese
+        "こんにちは,"
+    ];
+    let currentIndex = 0; // Start with the first greeting
+    let isDeleting = false; // Flag to determine if we are typing or deleting
+    let currentText = ""; // The current text being displayed
+    let charIndex = 0; // The index of the current character
+    const textContainer = document.getElementById("greetingtransition");
+    const typingSpeed = 120; // Typing speed in milliseconds
+    const deletingSpeed = 80; // Deleting speed in milliseconds
+    const delayBetweenWords = 2500; // Longer delay before starting the next word
+    function typewriterEffect() {
+        if (!isDeleting) {
+            // Typing characters
+            charIndex++;
+            currentText = greetings[currentIndex].substring(0, charIndex);
+        }
+        else {
+            // Deleting characters
+            charIndex--;
+            currentText = greetings[currentIndex].substring(0, charIndex);
+        }
+
+        // Update the text container
+        textContainer.textContent = currentText;
+
+        // Smooth transition for cursor
+        textContainer.style.borderRight = isDeleting
+            ? "3px solid transparent"
+            : "3px solid #006970";
+
+        // If the word is completely typed
+        if (!isDeleting && charIndex === greetings[currentIndex].length) {
+            isDeleting = true; // Start deleting
+            setTimeout(typewriterEffect, delayBetweenWords); // Wait longer before deleting
+            return;
+        }
+
+        // If the word is completely deleted
+        if (isDeleting && charIndex === 0) {
+            isDeleting = false; // Start typing the next word
+            currentIndex = (currentIndex + 1) % greetings.length; // Move to the next greeting
+        }
+
+        // Recursively call the function with adjusted speed
+        const timeout = isDeleting ? deletingSpeed : typingSpeed;
+        setTimeout(typewriterEffect, timeout);
+    }
+    // Start the typewriter effect
+    typewriterEffect();
+
+    /* View button pdf */
+    function viewPDF() {
+        window.open('file/Nhi_CV.pdf', '_blank'); // Opens the PDF in a new tab
+    }
+</script>
+
+

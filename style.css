@@ -1,0 +1,156 @@
+body{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: #E0F2F4;
+}
+
+h1{
+  font-family: "UTM Soraya";
+  src: url("00169-UTM-Soraya.ttf");
+  font-optical-sizing: auto;
+  font-weight: 550;
+  color: #deb625;
+  font-size: 48px;
+  font-style: normal;
+}
+
+p{
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-size: 20px;
+  font-style: normal;
+}
+
+.row {
+  margin-top: 50px;
+}
+
+/* Navigation bar */
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the navbar */
+  padding: 10px;
+  position: fixed;
+  top: 2%;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+nav ul{
+  background-color: rgba(255, 255, 255, 0.75); /* Transparent white background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 50px;
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: flex;
+  list-style: none;
+}
+
+nav ul li{
+  margin-top: 10px;
+}
+
+nav img{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+nav ul li a{
+  font-family: "UTM Soraya";
+  src: url("00169-UTM-Soraya.ttf");
+  font-size: 28px;
+  font-weight: 500;
+  color: #deb625;
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+nav ul li a:hover {
+    color: #006970; /* Highlight color */
+}
+
+.btn {
+  font-family: "Montserrat", serif;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border-width: 3px;
+  color: #006970;
+  border-color: #006970;
+}
+
+.btn-custom:hover {
+  color: #deb625;
+  border-color: #006970;
+  background-color: #006970;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  color: #deb625;
+  border-color: #006970;
+  background-color: #006970;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Typewrite greeting */
+.greetingtransition {
+  font-family: "UTM Soraya";
+  src: url("00169-UTM-Soraya.ttf");
+  color: #006970;
+  font-size: 64px;
+  font-weight: bold;
+  overflow: hidden;
+  height: 90px; /* Matches the height of the text */
+  display: inline-block;
+  align-items: center;
+  white-space: nowrap; /* Prevent text wrapping */
+  transition: all 0.3s ease; /* Smooth transitions for visual appeal */
+}
+
+/* Marquee animation styles */
+.marquee {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.marquee-content {
+    display: flex;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee-content img {
+    height: 30px;
+    margin: 0px;
+}
+
+@keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+}
+
+/* Footer */
+footer{
+    background-color: #006970;
+    margin-top: 100px;
+}
+
+img.symBehance,
+img.symWebsite,
+img.symMail,
+img.symPhone {
+  width: 60px;
+}
