@@ -45,39 +45,47 @@
             transform: rotate(-3deg) translateY(-5px);
         }
 
-        @media (max-width: 1200px) {
+        @media (max-width: 1800px) {
           .wiggle-container {
-            position: relative;
-            top: 10px; /* Aligns the images vertically */
-            left: 50%; /* Centers horizontally */
-            transform: translate(-50%, -50%); /* Fix centering */
-            display: flex;
-            justify-content: center;
-            gap: 50px; /* Spacing between images */
-            z-index: 2; /* Ensures it is on top of the curve */
+            top: 30px; /* Aligns the images vertically */
+            gap: 40px; /* Spacing between images */
         }
 
           .wiggle {
-              width: 130px; /* Image size */
-              transition: transform 0.2s ease-in-out;
+              width: 10vw; /* Image size */
           }
         }
 
-        @media (max-width: 800px) {
+        @media (max-width: 1200px) {
           .wiggle-container {
-            position: relative;
-            top: 40px; /* Aligns the images vertically */
-            left: 50%; /* Centers horizontally */
-            transform: translate(-50%, -50%); /* Fix centering */
-            display: flex;
-            justify-content: center;
-            gap: 20px; /* Spacing between images */
-            z-index: 2; /* Ensures it is on top of the curve */
+            top: 25px; /* Aligns the images vertically */
+            gap: 30px; /* Spacing between images */
         }
 
           .wiggle {
-              width: 90px; /* Image size */
-              transition: transform 0.2s ease-in-out;
+              width: 10vw; /* Image size */
+          }
+        }
+
+        @media (max-width: 1000px) {
+          .wiggle-container {
+            top: 55px; /* Aligns the images vertically */
+            gap: 30px; /* Spacing between images */
+        }
+
+          .wiggle {
+              width: 15vw; /* Image size */
+          }
+        }
+
+        @media (max-width: 700px) {
+          .wiggle-container {
+            top: 30px; /* Aligns the images vertically */
+            gap: 20px; /* Spacing between images */
+        }
+
+          .wiggle {
+              width: 15vw; /* Image size */
           }
         }
 
