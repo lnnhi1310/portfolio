@@ -37,6 +37,7 @@
         .wiggle {
             width: 10vw;
             max-width: 100%;
+            object-fit: contain;
             transition: transform 0.2s ease-in-out;
             animation: wiggle 4s infinite ease-in-out;
         }
@@ -56,7 +57,7 @@
 
         .wiggle:hover {
             transform: rotate(-3deg) translateY(-5px);
-            animation: none; duration timing-function delay iteration-count direction fill-mode;
+            animation: none;
         }
 
         @media (max-width: 1800px) {
@@ -138,6 +139,9 @@
             border-radius: 8px;
             width: 80%;
             height: 80%;
+            overflow-y: auto; /* Enables vertical scrolling */
+            padding: 20px; /* Adds padding for better content spacing */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional: adds some shadow for better visuals */
         }
 
         /* Close icon (X) styles */
@@ -197,6 +201,7 @@
         </div>
     </div>
 
+    <div class="aGap"></div>
     <!-- Overlay -->
     <div class="container">
         <div class="row">
@@ -212,6 +217,7 @@
         </div>
     </div>
 
+    <div class="aGap"></div>
     <!-- Overlay -->
     <div id="overlay1" class="overlay1">
         <div class="overlay-content">
@@ -224,7 +230,7 @@
                     <div class="col-xs-12 col-md-5">
                         <span id="closeOverlay1" class="close-icon">&times;</span>
                         <h2>Overlay Content</h2>
-                        <p>This is some content on the overlay.</p>
+                        <p>This is some content on the overlay. simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem</p>
                     </div>
                 </div>
             </div>
@@ -239,14 +245,14 @@
                 <div class="col-xs-12 col-md-6">
                     <h1>Contact</h1>
                 </div>
-                <div class="col-xs-12 col-md-6" style="text-align: right;">
+                <div class="iconfoot col-xs-12 col-md-6">
                     <a href=""><img src="image/behance.svg" class="symBehance"></a>
                     <a href=""><img src="image/website.svg" class="symWebsite"></a>
                     <a href=""><img src="image/mail.svg" class="symMail"></a>
                     <a href=""><img src="image/phone.svg" class="symPhone"></a>
                 </div>    
             </div>
-            <p style="font-size: 14px; color: aliceblue; padding: 30px; text-align: center;">&#169 Ly Ngoc Nhi, 2025</p>
+            <p style="font-size: 14px; color: aliceblue; padding-top: 100px; text-align: center;">&#169 Ly Ngoc Nhi, 2025</p>
         </div>
     </div>
 </body>

@@ -37,13 +37,16 @@
         .wiggle {
             width: 10vw;
             max-width: 100%;
+            object-fit: contain;
             transition: transform 0.2s ease-in-out;
             animation: wiggle 4s infinite ease-out;
         }
 
         .ot {
             animation: none;
+            margin-top: -5vh;
         }
+
         @keyframes wiggle {
             0% { transform: rotate(0deg); }
             25% { transform: rotate(-5deg); }
@@ -54,7 +57,7 @@
 
         .wiggle:hover {
             transform: rotate(-3deg) translateY(-5px);
-            animation: none; duration timing-function delay iteration-count direction fill-mode;
+            animation: none;
         }
 
         @media (max-width: 1800px) {
@@ -68,7 +71,11 @@
           .wiggle-container {
             top: -9.5vh; /* Aligns the images vertically */
             gap: 40px; /* Spacing between images */
-        }
+            }
+
+            .an {
+                margin-top: -3.5vh;
+            }
         }
 
         @media (max-width: 1200px) {
@@ -80,6 +87,9 @@
           .wiggle {
               width: 12vw; /* Image size */
           }
+          .an {
+                margin-top: -3.5vh;
+            }
         }
 
         @media (max-width: 900px) {
@@ -91,6 +101,9 @@
           .wiggle {
               width: 13vw; /* Image size */
           }
+          .an {
+                margin-top: -2.5vh;
+            }
         }
 
         @media (max-width: 700px) {
@@ -102,6 +115,9 @@
           .wiggle {
               width: 16vw; /* Image size */
           }
+          .an {
+                margin-top: -1.5vh;
+            }
         }
 
         .trigger {
@@ -195,6 +211,7 @@
         </div>
     </div>
 
+    <div class="aGap"></div>
     <!-- Overlay -->
     <div class="container">
         <div class="row">
@@ -209,7 +226,8 @@
             </div>
         </div>
     </div>
-
+    
+    <div class="aGap"></div>
     <!-- Overlay -->
     <div id="overlay1" class="overlay1">
         <div class="overlay-content">
@@ -237,14 +255,14 @@
                 <div class="col-xs-12 col-md-6">
                     <h1>Contact</h1>
                 </div>
-                <div class="col-xs-12 col-md-6" style="text-align: right;">
+                <div class="iconfoot col-xs-12 col-md-6">
                     <a href=""><img src="image/behance.svg" class="symBehance"></a>
                     <a href=""><img src="image/website.svg" class="symWebsite"></a>
                     <a href=""><img src="image/mail.svg" class="symMail"></a>
                     <a href=""><img src="image/phone.svg" class="symPhone"></a>
                 </div>    
             </div>
-            <p style="font-size: 14px; color: aliceblue; padding: 30px; text-align: center;">&#169 Ly Ngoc Nhi, 2025</p>
+            <p style="font-size: 14px; color: aliceblue; padding-top: 100px; text-align: center;">&#169 Ly Ngoc Nhi, 2025</p>
         </div>
     </div>
 </body>

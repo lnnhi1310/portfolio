@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "UTM Soraya";
+  src: url('file/00169-utm-soraya-webfont.woff2') format('woff2'),
+       url('file/00169-utm-soraya-webfont.woff') format('woff'),
+       url('file/00169-UTM-Soraya.ttf') format("truetype");
+  font-display: swap;
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 body{
   margin: 0;
   padding: 0;
@@ -22,7 +33,6 @@ html, body {
 
 h1{
   font-family: "UTM Soraya";
-  src: url("00169-UTM-Soraya.ttf");
   font-optical-sizing: auto;
   font-weight: 550;
   color: #deb625;
@@ -40,6 +50,10 @@ p{
 
 .row {
   margin-top: 50px;
+}
+
+.aGap{
+  margin-top: 100px;
 }
 
 /* Navigation bar */
@@ -77,7 +91,6 @@ nav img{
 
 nav ul li a{
   font-family: "UTM Soraya";
-  src: url("00169-UTM-Soraya.ttf");
   font-size: 28px;
   font-weight: 500;
   color: #deb625;
@@ -118,7 +131,6 @@ nav ul li a:hover {
 /* Typewrite greeting */
 .greetingtransition {
   font-family: "UTM Soraya";
-  src: url("00169-UTM-Soraya.ttf");
   color: #006970;
   font-size: 64px;
   font-weight: bold;
@@ -178,12 +190,32 @@ img.symPhone {
   text-align: right;
 }
 
+@media (max-width: 1200px) {
+  p {
+    font-size: 16px;
+  }
+  .greetingtransition {
+    height: 70px;
+    font-size: 48px;
+  }
+}
+
 @media (max-width: 800px) {
+  h1 {
+    font-size: 40px; /* Slightly smaller on medium screens */
+  }
+  p {
+    font-size: 18px;
+  }
+  .greetingtransition {
+    height: 70px;
+    font-size: 54px;
+  }
   nav{
     top: 84%;
   }
   .foot .container{
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
   .iconfoot{
     margin-top: 10px;
