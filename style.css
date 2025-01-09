@@ -40,6 +40,16 @@ h1{
   font-style: normal;
 }
 
+h3 {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 550;
+  color: #deb625;
+  font-size: 28px;
+  font-style: normal;
+  padding: 10px;
+}
+
 p{
   font-family: "Montserrat", serif;
   font-optical-sizing: auto;
@@ -169,6 +179,13 @@ nav ul li a:hover {
     }
 }
 
+@keyframes wiggle {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
 /* Footer */
 .foot{
     background-color: #006970;
@@ -188,6 +205,23 @@ img.symPhone {
 
 .iconfoot{
   text-align: right;
+}
+
+/* Click overlay */
+.trigger {
+  display: inline-block;
+  padding: 40px 40px;
+  background-color: white;
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.trigger:hover {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
 }
 
 @media (max-width: 1200px) {

@@ -47,14 +47,6 @@
             margin-top: -5vh;
         }
 
-        @keyframes wiggle {
-            0% { transform: rotate(0deg); }
-            25% { transform: rotate(-5deg); }
-            50% { transform: rotate(5deg); }
-            75% { transform: rotate(-5deg); }
-            100% { transform: rotate(0deg); }
-        }
-
         .wiggle:hover {
             transform: rotate(-3deg) translateY(-5px);
             animation: none;
@@ -119,22 +111,10 @@
           }
 
           .an {
-            margin-top: -1.5vh;
+            margin-top: -2.5vh;
         }
         }
 
-        .trigger {
-            display: inline-block;
-            padding: 20px 20px;
-            background-color: aliceblue;
-            color: white;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        .trigger:hover {
-            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
-        }
 
         /* Overlay styles */
         .overlay1 {
@@ -203,7 +183,7 @@
     <div class="container-fluid">
         <!-- SVG curve -->
         <svg class="curve" viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg">
-            <path d="M 20 100 Q 500 180, 980 100" stroke="gold" fill="transparent" stroke-width="2" />
+            <path d="M 20 100 Q 500 180, 980 100" stroke="#deb625" fill="transparent" stroke-width="4" />
         </svg>
         <!-- Wiggle images -->
         <div class="wiggle-container">
@@ -215,17 +195,26 @@
     </div>
 
     <div class="aGap"></div>
-    <!-- Topic Overlay -->
+    <!-- Topic -->
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-md-4">
-                    <img id="openOverlay1" class="trigger" src="image/nhi.jpg" width="100%">
+                <div class="trigger"  id="openOverlay1">
+                    <img src="image/nhi.jpg" width="100%">
+                    <h3>Content title</h3>
+                </div>
             </div>
             <div class="col-xs-12 col-md-4">
-                    <img id="openOverlay2" class="trigger" src="image/nhi.jpg" width="100%">
+                <div class="trigger"  id="openOverlay2">
+                    <img src="image/nhi.jpg" width="100%">
+                    <h3>Content title</h3>
+                </div>
             </div>
             <div class="col-xs-12 col-md-4">
-                    <img id="openOverlay3" class="trigger" src="image/nhi.jpg"width="100%">
+                <div class="trigger"  id="openOverlay3">
+                    <img src="image/nhi.jpg" width="100%">
+                    <h3>Content title</h3>
+                </div>
             </div>
         </div>
     </div>
@@ -238,7 +227,6 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-7">
                         <img src="image/nhi.jpg" width="100%">
-                        <br><br>
                     </div>
                     <div class="col-xs-12 col-md-5">
                         <span id="closeOverlay1" class="close-icon">&times;</span>
@@ -259,10 +247,10 @@
                     <h1>Contact</h1>
                 </div>
                 <div class="iconfoot col-xs-12 col-md-6">
-                    <a href=""><img src="image/behance.svg" class="symBehance"></a>
-                    <a href=""><img src="image/website.svg" class="symWebsite"></a>
-                    <a href=""><img src="image/mail.svg" class="symMail"></a>
-                    <a href=""><img src="image/phone.svg" class="symPhone"></a>
+                    <a href="https://www.behance.net/nhily2"><img src="image/behance.svg" class="symBehance"></a>
+                    <a href="https://lnnhi1310.github.io/portfolio/"><img src="image/website.svg" class="symWebsite"></a>
+                    <a href="mailto:ngocnhily.work@gmail.com"><img src="image/mail.svg" class="symMail"></a>
+                    <a href="tel:+84774144594"><img src="image/phone.svg" class="symPhone"></a>
                 </div>    
             </div>
             <p style="font-size: 14px; color: aliceblue; padding-top: 100px; text-align: center;">&#169 Ly Ngoc Nhi, 2025</p>
@@ -272,6 +260,7 @@
 </html>
 
 <script>
+    //Overlay 1
     // Get the elements
     const overlay1 = document.getElementById('overlay1');
     const openOverlay1 = document.getElementById('openOverlay1');
@@ -285,5 +274,37 @@
     // Close the overlay when the image is clicked
     closeOverlay1.addEventListener('click', function() {
     overlay1.style.display = 'none';
+    });
+
+        //Overlay 2
+    // Get the elements
+    const overlay2 = document.getElementById('overlay2');
+    const openOverlay2 = document.getElementById('openOverlay2');
+    const closeOverlay2 = document.getElementById('closeOverlay2');
+
+    // Open the overlay when the image is clicked
+    openOverlay1.addEventListener('click', function() {
+    overlay2.style.display = 'flex';
+    });
+
+    // Close the overlay when the image is clicked
+    closeOverlay1.addEventListener('click', function() {
+    overlay2.style.display = 'none';
+    });
+
+        //Overlay 3
+    // Get the elements
+    const overlay3 = document.getElementById('overlay3');
+    const openOverlay3 = document.getElementById('openOverlay3');
+    const closeOverlay3 = document.getElementById('closeOverlay3');
+
+    // Open the overlay when the image is clicked
+    openOverlay3.addEventListener('click', function() {
+    overlay3.style.display = 'flex';
+    });
+
+    // Close the overlay when the image is clicked
+    closeOverlay3.addEventListener('click', function() {
+    overlay3.style.display = 'none';
     });
 </script>
