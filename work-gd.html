@@ -15,6 +15,46 @@
     <script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <style>
+        .container-fluid {
+            position: relative; /* Makes absolute positioning work */
+            margin-top: -17%;
+        }
+
+        .curve {
+            width: 100%; /* Responsive */
+            height: 100%;
+            position: relative;
+        }
+
+        .wiggle-container {
+            position: relative;
+            top: -14vh; /* Aligns the images vertically */
+            left: 50%; /* Centers horizontally */
+            transform: translate(-50%, -50%); /* Fix centering */
+            display: flex;
+            justify-content: center;
+            gap: 60px; /* Spacing between images */
+            z-index: 2; /* Ensures it is on top of the curve */
+        }
+
+        .wiggle {
+            width: 10vw;
+            max-width: 100%;
+            object-fit: contain;
+            transition: transform 0.2s ease-in-out;
+            animation: wiggle 4s infinite ease-in-out;
+        }
+
+        .gd {
+            animation: none;
+            margin-top: -5vh;
+        }
+
+        .wiggle:hover {
+            transform: rotate(-3deg) translateY(-5px);
+            animation: none;
+        }
+
         @media (max-width: 1800px) {
   .wiggle-container {
     top: -13vh; /* Aligns the images vertically */
@@ -83,49 +123,6 @@
             width: 16vw; /* Image size */
         }
         }
-
-        .container-fluid {
-            position: relative; /* Makes absolute positioning work */
-            margin-top: -17%;
-        }
-
-        .curve {
-            width: 100%; /* Responsive */
-            height: 100%;
-            position: relative;
-        }
-
-        .wiggle-container {
-            position: relative;
-            top: -14vh; /* Aligns the images vertically */
-            left: 50%; /* Centers horizontally */
-            transform: translate(-50%, -50%); /* Fix centering */
-            display: flex;
-            justify-content: center;
-            gap: 60px; /* Spacing between images */
-            z-index: 2; /* Ensures it is on top of the curve */
-        }
-
-        .wiggle {
-            width: 10vw;
-            max-width: 100%;
-            object-fit: contain;
-            transition: transform 0.2s ease-in-out;
-            animation: wiggle 4s infinite ease-in-out;
-        }
-
-        .gd {
-            animation: none;
-            transform: none;
-        }
-
-        .wiggle:hover {
-            transform: rotate(-3deg) translateY(-5px);
-            animation: none;
-        }
-
-       
-
     </style>
 </head>
 
