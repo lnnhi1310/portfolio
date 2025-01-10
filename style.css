@@ -248,7 +248,7 @@ img.symPhone {
 
 /* Click overlay */
 .trigger {
-  display: relative;
+  display: inline-block;
   padding: 40px 40px;
   background-color: white;
   color: white;
@@ -258,6 +258,7 @@ img.symPhone {
   border: #E0F2F4;
   border-style: dotted;
   border-width: 10px;
+  height: fit-content;
 }
 
 .trigger:hover {
@@ -354,11 +355,6 @@ img.symPhone {
     font-size: 16px;
   }
 
-  .trigger {
-    padding: 20px 20px;
-    height: 450px;
-  }
-
   .greetingtransition {
     height: 70px;
     font-size: 48px;
@@ -375,6 +371,7 @@ img.symPhone {
   p {
     font-size: 18px;
   }
+
   .greetingtransition {
     height: 70px;
     font-size: 54px;
@@ -391,3 +388,5 @@ img.symPhone {
     text-align: left;
   }
 }
+
+/*work*/

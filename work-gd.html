@@ -11,11 +11,79 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Music&display=swap" rel="stylesheet"> <!-- font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,600,0,200" /> <!-- icon -->
     <link rel="stylesheet" href="style.css"> <!-- link custom CSS -->
-    <link rel="stylesheet" href="mediaqueries.css">
     <script src="script.js" defer></script>
     <script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <style>
+        @media (max-width: 1800px) {
+  .wiggle-container {
+    top: -13vh; /* Aligns the images vertically */
+    gap: 40px; /* Spacing between images */
+}
+        }
+
+        @media (max-width: 1600px) {
+        .wiggle-container {
+            top: -12vh; /* Aligns the images vertically */
+            gap: 40px; /* Spacing between images */
+        }
+        }
+
+        @media (max-width: 1400px) {
+        .wiggle-container {
+            top: -11.5vh; /* Aligns the images vertically */
+            gap: 30px; /* Spacing between images */
+        }
+
+        .wiggle {
+            width: 11vw; /* Image size */
+        }
+        }
+
+        @media (max-width: 1200px) {
+        .wiggle-container {
+            top: -8vh; /* Aligns the images vertically */
+            gap: 30px; /* Spacing between images */
+        }
+
+        .wiggle {
+            width: 10vw; /* Image size */
+        }
+        }
+
+        @media (max-width: 1000px) {
+        .wiggle-container {
+            top: -7vh; /* Aligns the images vertically */
+            gap: 30px; /* Spacing between images */
+        }
+
+        .wiggle {
+            width: 13vw; /* Image size */
+        }
+        }
+
+        @media (max-width: 800px) {
+        .wiggle-container {
+            top: -6vh; /* Aligns the images vertically */
+            gap: 20px; /* Spacing between images */
+        }
+
+        .wiggle {
+            width: 16vw; /* Image size */
+        }
+        }
+
+        @media (max-width: 650px) {
+        .wiggle-container {
+            top: -4.5vh; /* Aligns the images vertically */
+            gap: 20px; /* Spacing between images */
+        }
+
+        .wiggle {
+            width: 16vw; /* Image size */
+        }
+        }
+
         .container-fluid {
             position: relative; /* Makes absolute positioning work */
             margin-top: -17%;
