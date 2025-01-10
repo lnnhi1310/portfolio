@@ -40,14 +40,22 @@ h1{
   font-style: normal;
 }
 
+h2 {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  color: #006970;
+  font-size: 32px;
+  font-style: normal;
+}
+
 h3 {
   font-family: "Montserrat", serif;
   font-optical-sizing: auto;
-  font-weight: 550;
-  color: #deb625;
-  font-size: 28px;
+  font-weight: 700;
+  color: #006970;
+  font-size: 24px;
   font-style: normal;
-  padding: 10px;
 }
 
 p{
@@ -66,6 +74,39 @@ p{
   margin-top: 100px;
 }
 
+.tag {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  color: #006970;
+  background: linear-gradient(to right, #c7e8ff, #b3e5c6);
+  font-weight: 400;
+  font-size: 14px;
+  font-style: normal;
+  text-align: center;
+  padding: 5px 20px;
+  border-radius: 20px;
+}
+
+.divtag {
+  display: flex;
+  gap: 10px; /* Space between the tags */
+  align-items: center; /* Align vertically */
+  height: 35px;
+}
+
+.image-container {
+  width: 100%; /* Set the width */
+  aspect-ratio: 1 / 1; /* Ensures it stays square */
+  overflow: hidden;
+  margin-bottom: 18px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the square */
+}
+
 /* Navigation bar */
 nav{
   display: flex;
@@ -73,7 +114,7 @@ nav{
   justify-content: center; /* Center the navbar */
   padding: 10px;
   position: fixed;
-  top: 2%;
+  top: 3%;
   left: 0;
   right: 0;
   z-index: 1000;
@@ -180,11 +221,9 @@ nav ul li a:hover {
 }
 
 @keyframes wiggle {
-  0% { transform: rotate(0deg); }
-  25% { transform: rotate(-5deg); }
+  0% { transform: rotate(-5deg); }
   50% { transform: rotate(5deg); }
-  75% { transform: rotate(-5deg); }
-  100% { transform: rotate(0deg); }
+  100% { transform: rotate(-5deg); }
 }
 /* Footer */
 .foot{
@@ -209,18 +248,19 @@ img.symPhone {
 
 /* Click overlay */
 .trigger {
-  display: inline-block;
+  display: relative;
   padding: 40px 40px;
   background-color: white;
   color: white;
   cursor: pointer;
-  border-radius: 30px;
   margin-bottom: 20px;
   transition: transform 0.3s ease-in-out;
+  border: #E0F2F4;
+  border-style: dotted;
+  border-width: 10px;
 }
 
 .trigger:hover {
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
   transform: translateY(-10px);
 }
 
@@ -240,44 +280,97 @@ img.symPhone {
     z-index: 1100;
   }
 
-      .overlay-content {
-          background-color: white;
-          border-radius: 8px;
-          width: 80%;
-          height: 80%;
-          overflow-y: auto; /* Enables vertical scrolling */
-          padding: 20px; /* Adds padding for better content spacing */
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional: adds some shadow for better visuals */
-      }
+.overlay-content {
+  background-color: white;
+  border-radius: 8px;
+  width: 80%;
+  height: 80%;
+  padding: 20px; /* Adds padding for better content spacing */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional: adds some shadow for better visuals */
+  }
 
-      /* Close icon (X) styles */
-      .close-icon {
-      font-size: 50px;
-      color: #deb625;
-      cursor: pointer;
-      align-items: right;
-      position: absolute;
-      top: 4%; /* Position it 10px from the top */
-      right: 4%; /* Position it 10px from the right */
-      }
+/* Close icon (X) styles */
+.close-icon {
+  font-size: 50px;
+  color: #deb625;
+  cursor: pointer;
+  align-items: right;
+  position: absolute;
+  top: 4%; /* Position it 10px from the top */
+  right: 4%; /* Position it 10px from the right */
+}
 
-      .close-icon:hover {
-      color: #E0F2F4;
-      }
+.close-icon:hover {
+  color: #E0F2F4;
+}
 
-@media (max-width: 1200px) {
+.holder {
+  margin-top: 10px;
+}
+
+.holder p {
+  font-size: 16px;
+}
+
+.holder h4 {
+  font-size: 20px;
+}
+/* Custom button styles */
+.carousel-control-prev, 
+.carousel-control-next {
+  border: none;  /* Remove the default border */
+}
+
+/* Change the color of the button icons */
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+  background-color: #006970;
+  padding: 3px; /* Icon color (you can change this to any color) */
+  border-radius: 15px;
+}
+
+.responsive-iframe-container {
+  position: relative;
+  width: 100%; /* Ensures the container is responsive */
+  padding-bottom: 56.25%; /* 16:9 ratio (9/16 = 0.5625 -> 56.25%) */
+  height: 0; /* Height is set to 0 to maintain aspect ratio */
+  overflow: hidden;
+}
+
+.responsive-iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 1400px) {
+  h3 {
+    font-size: 16px;
+  }
+
   p {
     font-size: 16px;
   }
+
+  .trigger {
+    padding: 20px 20px;
+    height: 450px;
+  }
+
   .greetingtransition {
     height: 70px;
     font-size: 48px;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   h1 {
     font-size: 40px; /* Slightly smaller on medium screens */
+  }
+  h3 {
+    font-size: 28px;
   }
   p {
     font-size: 18px;
@@ -286,6 +379,7 @@ img.symPhone {
     height: 70px;
     font-size: 54px;
   }
+
   nav{
     top: 84%;
   }

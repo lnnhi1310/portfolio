@@ -1,0 +1,68 @@
+@media (max-width: 1800px) {
+    .wiggle-container {
+      top: -13vh; /* Aligns the images vertically */
+      gap: 40px; /* Spacing between images */
+  }
+  }
+
+  @media (max-width: 1600px) {
+    .wiggle-container {
+      top: -12vh; /* Aligns the images vertically */
+      gap: 40px; /* Spacing between images */
+  }
+  }
+
+  @media (max-width: 1400px) {
+    .wiggle-container {
+      top: -11.5vh; /* Aligns the images vertically */
+      gap: 30px; /* Spacing between images */
+  }
+
+    .wiggle {
+        width: 11vw; /* Image size */
+    }
+  }
+
+  @media (max-width: 1200px) {
+    .wiggle-container {
+      top: -8vh; /* Aligns the images vertically */
+      gap: 30px; /* Spacing between images */
+  }
+
+    .wiggle {
+        width: 10vw; /* Image size */
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .wiggle-container {
+      top: -7vh; /* Aligns the images vertically */
+      gap: 30px; /* Spacing between images */
+  }
+
+    .wiggle {
+        width: 13vw; /* Image size */
+    }
+  }
+
+  @media (max-width: 800px) {
+    .wiggle-container {
+      top: -6vh; /* Aligns the images vertically */
+      gap: 20px; /* Spacing between images */
+  }
+
+    .wiggle {
+        width: 16vw; /* Image size */
+    }
+  }
+
+  @media (max-width: 650px) {
+    .wiggle-container {
+      top: -4.5vh; /* Aligns the images vertically */
+      gap: 20px; /* Spacing between images */
+  }
+
+    .wiggle {
+        width: 16vw; /* Image size */
+    }
+  }

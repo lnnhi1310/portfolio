@@ -11,6 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Music&display=swap" rel="stylesheet"> <!-- font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,600,0,200" /> <!-- icon -->
     <link rel="stylesheet" href="style.css"> <!-- link custom CSS -->
+    <link rel="stylesheet" href="mediaqueries.css">
+    <script src="script.js" defer></script>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <style>
         .container-fluid {
             position: relative; /* Makes absolute positioning work */
@@ -52,74 +56,7 @@
             animation: none;
         }
 
-        @media (max-width: 1800px) {
-          .wiggle-container {
-            top: -12vh; /* Aligns the images vertically */
-            gap: 40px; /* Spacing between images */
-        }
-        }
-
-        @media (max-width: 1600px) {
-          .wiggle-container {
-            top: -11vh; /* Aligns the images vertically */
-            gap: 40px; /* Spacing between images */
-        }
-        }
-
-        @media (max-width: 1400px) {
-          .wiggle-container {
-            top: -10vh; /* Aligns the images vertically */
-            gap: 30px; /* Spacing between images */
-        }
-
-          .wiggle {
-              width: 11vw; /* Image size */
-          }
-        }
-
-        @media (max-width: 1200px) {
-          .wiggle-container {
-            top: -8vh; /* Aligns the images vertically */
-            gap: 30px; /* Spacing between images */
-        }
-
-          .wiggle {
-              width: 10vw; /* Image size */
-          }
-        }
-
-        @media (max-width: 1000px) {
-          .wiggle-container {
-            top: -7vh; /* Aligns the images vertically */
-            gap: 30px; /* Spacing between images */
-        }
-
-          .wiggle {
-              width: 13vw; /* Image size */
-          }
-        }
-
-        @media (max-width: 800px) {
-          .wiggle-container {
-            top: -6vh; /* Aligns the images vertically */
-            gap: 20px; /* Spacing between images */
-        }
-
-          .wiggle {
-              width: 16vw; /* Image size */
-          }
-        }
-
-        @media (max-width: 700px) {
-          .wiggle-container {
-            top: -5vh; /* Aligns the images vertically */
-            gap: 20px; /* Spacing between images */
-        }
-
-          .wiggle {
-              width: 16vw; /* Image size */
-          }
-        }
+       
 
     </style>
 </head>
@@ -153,7 +90,8 @@
     <div class="container-fluid">
         <!-- SVG curve -->
         <svg class="curve" viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg">
-            <path d="M 20 100 Q 500 180, 980 100" stroke="gold" fill="transparent" stroke-width="2" />
+            <path d="M 0 100 Q 500 175, 1000 100" stroke="#006970" fill="transparent" stroke-width="2" />
+            <path d="M 0 110 Q 500 180, 1000 110" stroke="#006970" fill="transparent" stroke-width="2" />
         </svg>
         <!-- Wiggle images -->
         <div class="wiggle-container">
@@ -167,15 +105,44 @@
     <div class="aGap"></div>
     <!-- Overlay -->
     <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-md-4">
-                    <img id="openOverlay1" class="trigger" src="image/nhi.jpg" width="100%">
-            </div>
-            <div class="col-xs-12 col-md-4">
-                    <img id="openOverlay2" class="trigger" src="image/nhi.jpg" width="100%">
-            </div>
-            <div class="col-xs-12 col-md-4">
-                    <img id="openOverlay3" class="trigger" src="image/nhi.jpg"width="100%">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-4">
+                    <div class="trigger" id="openOverlay1">
+                        <div class="image-container">
+                            <img src="image/work/animation-circus.PNG">
+                        </div>
+                        <div class="divtag">
+                            <p class="tag">School Project</p>
+                            <p class="tag">3D</p>
+                        </div>
+                        <h3>⊹ ࣪ ˖WHISPER OF THE FAIRY DRAGON</h3>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="trigger" id="openOverlay2">
+                        <div class="image-container">
+                            <img src="image/work/animation-circus.PNG">
+                        </div>
+                        <div class="divtag">
+                            <p class="tag">School Project</p>
+                            <p class="tag">2D</p>
+                        </div>
+                        <h3>⊹ ࣪ ˖MIDNIGHT PARADE</h3>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="trigger" id="openOverlay3">
+                        <div class="image-container">
+                            <img src="image/work/animation-circus.PNG">
+                        </div>
+                        <div class="divtag">
+                            <p class="tag">School Project</p>
+                            <p class="tag">2D/3D</p>
+                        </div>
+                        <h3>⊹ ࣪ ˖ILLUSORY CIRCUS</h3>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -188,12 +155,45 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-7">
                         <img src="image/nhi.jpg" width="100%">
-                        <br><br>
                     </div>
                     <div class="col-xs-12 col-md-5">
                         <span id="closeOverlay1" class="close-icon">&times;</span>
                         <h2>Overlay Content</h2>
-                        <p>This is some content on the overlay. simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem</p>
+                        <p>This is some content on the overlay.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay2" class="overlay2">
+        <div class="overlay-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-7">
+                        <img src="image/nhi.jpg" width="100%">
+                    </div>
+                    <div class="col-xs-12 col-md-5">
+                        <span id="closeOverlay2" class="close-icon">&times;</span>
+                        <h2>Overlay Content</h2>
+                        <p>This is some content 2 on the overlay.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay3" class="overlay3">
+        <div class="overlay-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-7">
+                        <img src="image/nhi.jpg" width="100%">
+                    </div>
+                    <div class="col-xs-12 col-md-5">
+                        <span id="closeOverlay3" class="close-icon">&times;</span>
+                        <h2>Overlay Content</h2>
+                        <p>This is some content on the overlay.</p>
                     </div>
                 </div>
             </div>
@@ -222,51 +222,21 @@
 </html>
 
 <script>
-    //Overlay 1
-    // Get the elements
-    const overlay1 = document.getElementById('overlay1');
-    const openOverlay1 = document.getElementById('openOverlay1');
-    const closeOverlay1 = document.getElementById('closeOverlay1');
+    function setupOverlay(openId, overlayId, closeId) {
+    const openButton = document.getElementById(openId);
+    const overlay = document.getElementById(overlayId);
+    const closeButton = document.getElementById(closeId);
 
-    // Open the overlay when the image is clicked
-    openOverlay1.addEventListener('click', function() {
-    overlay1.style.display = 'flex';
-    });
+    if (openButton && overlay && closeButton) {
+        openButton.addEventListener('click', () => overlay.style.display = 'flex');
+        closeButton.addEventListener('click', () => overlay.style.display = 'none');
+    } else {
+        console.warn(`Missing element(s) for IDs: ${openId}, ${overlayId}, ${closeId}`);
+    }
+}
 
-    // Close the overlay when the image is clicked
-    closeOverlay1.addEventListener('click', function() {
-    overlay1.style.display = 'none';
-    });
-
-        //Overlay 2
-    // Get the elements
-    const overlay2 = document.getElementById('overlay2');
-    const openOverlay2 = document.getElementById('openOverlay2');
-    const closeOverlay2 = document.getElementById('closeOverlay2');
-
-    // Open the overlay when the image is clicked
-    openOverlay2.addEventListener('click', function() {
-    overlay2.style.display = 'flex';
-    });
-
-    // Close the overlay when the image is clicked
-    closeOverlay2.addEventListener('click', function() {
-    overlay2.style.display = 'none';
-    });
-
-        //Overlay 3
-    // Get the elements
-    const overlay3 = document.getElementById('overlay3');
-    const openOverlay3 = document.getElementById('openOverlay3');
-    const closeOverlay3 = document.getElementById('closeOverlay3');
-
-    // Open the overlay when the image is clicked
-    openOverlay3.addEventListener('click', function() {
-    overlay3.style.display = 'flex';
-    });
-
-    // Close the overlay when the image is clicked
-    closeOverlay3.addEventListener('click', function() {
-    overlay3.style.display = 'none';
-    });
+// Set up all overlays
+setupOverlay('openOverlay1', 'overlay1', 'closeOverlay1');
+setupOverlay('openOverlay2', 'overlay2', 'closeOverlay2');
+setupOverlay('openOverlay3', 'overlay3', 'closeOverlay3');
 </script>

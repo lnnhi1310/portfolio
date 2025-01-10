@@ -11,6 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Music&display=swap" rel="stylesheet"> <!-- font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,600,0,200" /> <!-- icon -->
     <link rel="stylesheet" href="style.css"> <!-- link custom CSS -->
+    <link rel="stylesheet" href="mediaqueries.css">
+    <script src="script.js" defer></script>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <style>
         .container-fluid {
             position: relative; /* Makes absolute positioning work */
@@ -39,7 +43,7 @@
             max-width: 100%;
             object-fit: contain;
             transition: transform 0.2s ease-in-out;
-            animation: wiggle 4s infinite ease-out;
+            animation: wiggle 4s infinite ease-in-out;
         }
 
         .dd {
@@ -49,53 +53,6 @@
         .wiggle:hover {
             transform: rotate(-3deg) translateY(-5px);
             animation: none;
-        }
-
-        @media (max-width: 1800px) {
-          .wiggle-container {
-            top: -12vh; /* Aligns the images vertically */
-            gap: 40px; /* Spacing between images */
-        }
-        }
-
-        @media (max-width: 1500px) {
-          .wiggle-container {
-            top: -9.5vh; /* Aligns the images vertically */
-            gap: 40px; /* Spacing between images */
-        }
-        }
-
-        @media (max-width: 1200px) {
-          .wiggle-container {
-            top: -8vh; /* Aligns the images vertically */
-            gap: 30px; /* Spacing between images */
-        }
-
-          .wiggle {
-              width: 12vw; /* Image size */
-          }
-        }
-
-        @media (max-width: 900px) {
-          .wiggle-container {
-            top: -6vh; /* Aligns the images vertically */
-            gap: 30px; /* Spacing between images */
-        }
-
-          .wiggle {
-              width: 13vw; /* Image size */
-          }
-        }
-
-        @media (max-width: 700px) {
-          .wiggle-container {
-            top: -4.5vh; /* Aligns the images vertically */
-            gap: 20px; /* Spacing between images */
-        }
-
-          .wiggle {
-              width: 16vw; /* Image size */
-          }
         }
     </style>
 </head>
@@ -129,7 +86,8 @@
     <div class="container-fluid">
         <!-- SVG curve -->
         <svg class="curve" viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg">
-            <path d="M 20 100 Q 500 180, 980 100" stroke="gold" fill="transparent" stroke-width="2" />
+            <path d="M 0 100 Q 500 175, 1000 100" stroke="#006970" fill="transparent" stroke-width="2" />
+            <path d="M 0 110 Q 500 180, 1000 110" stroke="#006970" fill="transparent" stroke-width="2" />
         </svg>
         <!-- Wiggle images -->
         <div class="wiggle-container">
@@ -143,15 +101,44 @@
     <div class="aGap"></div>
     <!-- Overlay -->
     <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-md-4">
-                    <img id="openOverlay1" class="trigger" src="image/nhi.jpg" width="100%">
-            </div>
-            <div class="col-xs-12 col-md-4">
-                    <img id="openOverlay2" class="trigger" src="image/nhi.jpg" width="100%">
-            </div>
-            <div class="col-xs-12 col-md-4">
-                    <img id="openOverlay3" class="trigger" src="image/nhi.jpg"width="100%">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-4">
+                    <div class="trigger" id="openOverlay1">
+                        <div class="image-container">
+                            <img src="image/work/animation-circus.PNG">
+                        </div>
+                        <div class="divtag">
+                            <p class="tag">School Project</p>
+                            <p class="tag">3D</p>
+                        </div>
+                        <h3>⊹ ࣪ ˖WHISPER OF THE FAIRY DRAGON</h3>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="trigger" id="openOverlay2">
+                        <div class="image-container">
+                            <img src="image/work/animation-circus.PNG">
+                        </div>
+                        <div class="divtag">
+                            <p class="tag">School Project</p>
+                            <p class="tag">2D</p>
+                        </div>
+                        <h3>⊹ ࣪ ˖MIDNIGHT PARADE</h3>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <div class="trigger" id="openOverlay3">
+                        <div class="image-container">
+                            <img src="image/work/animation-circus.PNG">
+                        </div>
+                        <div class="divtag">
+                            <p class="tag">School Project</p>
+                            <p class="tag">2D/3D</p>
+                        </div>
+                        <h3>⊹ ࣪ ˖ILLUSORY CIRCUS</h3>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -164,10 +151,43 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-7">
                         <img src="image/nhi.jpg" width="100%">
-                        <br><br>
                     </div>
                     <div class="col-xs-12 col-md-5">
                         <span id="closeOverlay1" class="close-icon">&times;</span>
+                        <h2>Overlay Content</h2>
+                        <p>This is some content on the overlay.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay2" class="overlay2">
+        <div class="overlay-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-7">
+                        <img src="image/nhi.jpg" width="100%">
+                    </div>
+                    <div class="col-xs-12 col-md-5">
+                        <span id="closeOverlay2" class="close-icon">&times;</span>
+                        <h2>Overlay Content</h2>
+                        <p>This is some content 2 on the overlay.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="overlay3" class="overlay3">
+        <div class="overlay-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-7">
+                        <img src="image/nhi.jpg" width="100%">
+                    </div>
+                    <div class="col-xs-12 col-md-5">
+                        <span id="closeOverlay3" class="close-icon">&times;</span>
                         <h2>Overlay Content</h2>
                         <p>This is some content on the overlay.</p>
                     </div>
