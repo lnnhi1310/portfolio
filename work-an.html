@@ -40,14 +40,8 @@
         .wiggle {
             width: 10vw;
             max-width: 100%;
-            object-fit: contain;
             transition: transform 0.2s ease-in-out;
             animation: wiggle 4s infinite ease-in-out;
-        }
-
-        .an {
-            animation: none;
-            margin-top: -5vh;
         }
 
         .wiggle:hover {
@@ -56,10 +50,10 @@
         }
 
         @media (max-width: 1800px) {
-  .wiggle-container {
-    top: -13vh; /* Aligns the images vertically */
-    gap: 40px; /* Spacing between images */
-}
+        .wiggle-container {
+            top: -13vh; /* Aligns the images vertically */
+            gap: 40px; /* Spacing between images */
+        }
         }
 
         @media (max-width: 1600px) {
@@ -153,16 +147,14 @@
 
     <!-- FilterSelection -->
     <div class="container-fluid">
-        <!-- SVG curve -->
         <svg class="curve" viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg">
             <path d="M 0 100 Q 500 175, 1000 100" stroke="#006970" fill="transparent" stroke-width="2" />
             <path d="M 0 110 Q 500 180, 1000 110" stroke="#006970" fill="transparent" stroke-width="2" />
         </svg>
-        <!-- Wiggle images -->
         <div class="wiggle-container">
             <a href="work-gd.html"><img src="image/graphic.png" class="gd wiggle"></a>
-            <img src="image/animation1.png" class="an wiggle" style="padding-top: 10px;">
-            <a href="work-dd.html"><img src="image/2d3d.png" class="dd wiggle" style="padding-top: 10px;"></a>
+            <img src="image/animation1.png" class="an wiggle" style="padding-top: 3px;">
+            <a href="work-dd.html"><img src="image/2d3d.png" class="dd wiggle" style="padding-top: 3px;"></a>
             <a href="work-ot.html"><img src="image/other.png" class="ot wiggle"></a>
         </div>
     </div>
@@ -171,7 +163,7 @@
     <!-- Topic -->
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-md-4">
+            <div class="col-xs-12 col-md-6 col-lg-4">
                 <div class="trigger" id="openOverlay1">
                     <div class="image-container">
                         <img src="image/work/wofd (18).jpg">
@@ -183,7 +175,7 @@
                     <h3>⊹ ࣪ ˖WHISPER OF THE FAIRY DRAGON</h3>
                 </div>
             </div>
-            <div class="col-xs-12 col-md-4">
+            <div class="col-xs-12 col-md-6 col-lg-4">
                 <div class="trigger" id="openOverlay2">
                     <div class="image-container">
                         <img src="image/work/mnp (1).JPG">
@@ -195,7 +187,7 @@
                     <h3>⊹ ࣪ ˖MIDNIGHT PARADE <br> "</h3>
                 </div>
             </div>
-            <div class="col-xs-12 col-md-4">
+            <div class="col-xs-12 col-md-6 col-lg-4">
                 <div class="trigger" id="openOverlay3">
                     <div class="image-container">
                         <img src="image/work/ilc (5).PNG">
@@ -294,8 +286,72 @@
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
-                          </div><br>
-                    </div>
+                        </div>
+                            <div class="carousel-track-wrapper">
+                                <div class="carousel-track">
+                                    <div class="track-thumbnail" data-bs-target="#carouselExample1" data-bs-slide-to="0">
+                                        <img src="image/work/wofd (18).jpg" class="img-thumbnail" alt="Thumbnail 1">
+                                    </div>
+                                    <div class="track-thumbnail" data-bs-target="#carouselExample1" data-bs-slide-to="1">
+                                        <img src="image/work/wofd (19).jpg" class="img-thumbnail" alt="Thumbnail 2">
+                                    </div>
+                                    <div class="track-thumbnail" data-bs-target="#carouselExample1" data-bs-slide-to="2">
+                                        <img src="https://via.placeholder.com/150" class="img-thumbnail" alt="Thumbnail 2">
+                                    </div>
+                                    <div class="track-thumbnail" data-bs-target="#carouselExample1" data-bs-slide-to="3">
+                                        <img src="image/work/wofd (1).jpg" class="img-thumbnail" alt="Thumbnail 4">
+                                    </div>
+                                    <div class="track-thumbnail" data-bs-target="#carouselExample1" data-bs-slide-to="4">
+                                        <img src="image/work/wofd (2).jpg" class="img-thumbnail" alt="Thumbnail 5">
+                                    </div>
+                                    <div class="track-thumbnail" data-bs-target="#carouselExample1" data-bs-slide-to="5">
+                                        <img src="image/work/wofd (3).jpg" class="img-thumbnail" alt="Thumbnail 6">
+                                    </div>
+                                    <div class="track-thumbnail" data-bs-target="#carouselExample1" data-bs-slide-to="6">
+                                        <img src="image/work/wofd (4).jpg" class="img-thumbnail" alt="Thumbnail 7">
+                                    </div>
+                                    <div class="track-thumbnail" data-bs-target="#carouselExample1" data-bs-slide-to="7">
+                                        <img src="image/work/wofd (5).jpg" class="img-thumbnail" alt="Thumbnail 8">
+                                    </div>
+                                    <div class="track-thumbnail" data-bs-target="#carouselExample1" data-bs-slide-to="8">
+                                        <img src="image/work/wofd (6).jpg" class="img-thumbnail" alt="Thumbnail 9">
+                                    </div>
+                                    <div class="track-thumbnail" data-bs-target="#carouselExample1" data-bs-slide-to="9">
+                                        <img src="image/work/wofd (7).jpg" class="img-thumbnail" alt="Thumbnail 10">
+                                    </div>
+                                    <div class="track-thumbnail" data-bs-target="#carouselExample1" data-bs-slide-to="10">
+                                        <img src="image/work/wofd (8).jpg" class="img-thumbnail" alt="Thumbnail 11">
+                                    </div>
+                                    <div class="track-thumbnail" data-bs-target="#carouselExample1" data-bs-slide-to="11">
+                                        <img src="image/work/wofd (9).jpg" class="img-thumbnail" alt="Thumbnail 12">
+                                    </div>
+                                    <div class="track-thumbnail" data-bs-target="#carouselExample1" data-bs-slide-to="12">
+                                        <img src="image/work/wofd (10).jpg" class="img-thumbnail" alt="Thumbnail 12">
+                                    </div>
+                                    <div class="track-thumbnail" data-bs-target="#carouselExample1" data-bs-slide-to="13">
+                                        <img src="image/work/wofd (11).jpg" class="img-thumbnail" alt="Thumbnail 12">
+                                    </div>
+                                    <div class="track-thumbnail" data-bs-target="#carouselExample1" data-bs-slide-to="14">
+                                        <img src="image/work/wofd (12).jpg" class="img-thumbnail" alt="Thumbnail 12">
+                                    </div>
+                                    <div class="track-thumbnail" data-bs-target="#carouselExample1" data-bs-slide-to="15">
+                                        <img src="image/work/wofd (13).jpg" class="img-thumbnail" alt="Thumbnail 12">
+                                    </div>
+                                    <div class="track-thumbnail" data-bs-target="#carouselExample1" data-bs-slide-to="16">
+                                        <img src="image/work/wofd (14).jpg" class="img-thumbnail" alt="Thumbnail 12">
+                                    </div>
+                                    <div class="track-thumbnail" data-bs-target="#carouselExample1" data-bs-slide-to="17">
+                                        <img src="image/work/wofd (15).jpg" class="img-thumbnail" alt="Thumbnail 12">
+                                    </div>
+                                    <div class="track-thumbnail" data-bs-target="#carouselExample1" data-bs-slide-to="18">
+                                        <img src="image/work/wofd (16).jpg" class="img-thumbnail" alt="Thumbnail 12">
+                                    </div>
+                                    <div class="track-thumbnail" data-bs-target="#carouselExample1" data-bs-slide-to="19">
+                                        <img src="image/work/wofd (17).jpg" class="img-thumbnail" alt="Thumbnail 12">
+                                    </div>
+                                </div>
+                            </div><br>
+                        </div>
                     <div class="col-xs-12 col-md-4">
                         <span id="closeOverlay1" class="close-icon">&times;</span>
                         <div class="divtag">
@@ -386,6 +442,55 @@
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
+                        </div>
+                        <div class="carousel-track-wrapper2">
+                            <div class="carousel-track2">
+                                <div class="track-thumbnail2" data-bs-target="#carouselExample2" data-bs-slide-to="0">
+                                    <img src="image/work/mnp (1).jpg" class="img-thumbnail" alt="Thumbnail 1">
+                                </div>
+                                <div class="track-thumbnail2" data-bs-target="#carouselExample2" data-bs-slide-to="1">
+                                    <img src="image/work/mnp (2).jpg" class="img-thumbnail" alt="Thumbnail 2">
+                                </div>
+                                <div class="track-thumbnail2" data-bs-target="#carouselExample2" data-bs-slide-to="2">
+                                    <img src="https://via.placeholder.com/150" class="img-thumbnail" alt="Thumbnail 2">
+                                </div>
+                                <div class="track-thumbnail2" data-bs-target="#carouselExample2" data-bs-slide-to="3">
+                                    <img src="image/work/mnp (3).jpg" class="img-thumbnail" alt="Thumbnail 4">
+                                </div>
+                                <div class="track-thumbnail2" data-bs-target="#carouselExample2" data-bs-slide-to="4">
+                                    <img src="image/work/mnp (4).jpg" class="img-thumbnail" alt="Thumbnail 5">
+                                </div>
+                                <div class="track-thumbnail2" data-bs-target="#carouselExample2" data-bs-slide-to="5">
+                                    <img src="image/work/mnp (5).jpg" class="img-thumbnail" alt="Thumbnail 6">
+                                </div>
+                                <div class="track-thumbnail2" data-bs-target="#carouselExample2" data-bs-slide-to="6">
+                                    <img src="image/work/mnp (6).jpg" class="img-thumbnail" alt="Thumbnail 7">
+                                </div>
+                                <div class="track-thumbnail2" data-bs-target="#carouselExample2" data-bs-slide-to="7">
+                                    <img src="image/work/mnp (7).jpg" class="img-thumbnail" alt="Thumbnail 8">
+                                </div>
+                                <div class="track-thumbnail2" data-bs-target="#carouselExample2" data-bs-slide-to="8">
+                                    <img src="image/work/mnp (8).jpg" class="img-thumbnail" alt="Thumbnail 9">
+                                </div>
+                                <div class="track-thumbnail2" data-bs-target="#carouselExample2" data-bs-slide-to="9">
+                                    <img src="image/work/mnp (9).jpg" class="img-thumbnail" alt="Thumbnail 10">
+                                </div>
+                                <div class="track-thumbnail2" data-bs-target="#carouselExample2" data-bs-slide-to="10">
+                                    <img src="image/work/mnp (10).jpg" class="img-thumbnail" alt="Thumbnail 11">
+                                </div>
+                                <div class="track-thumbnail2" data-bs-target="#carouselExample2" data-bs-slide-to="11">
+                                    <img src="image/work/mnp (11).jpg" class="img-thumbnail" alt="Thumbnail 12">
+                                </div>
+                                <div class="track-thumbnail2" data-bs-target="#carouselExample2" data-bs-slide-to="12">
+                                    <img src="image/work/mnp (12).jpg" class="img-thumbnail" alt="Thumbnail 12">
+                                </div>
+                                <div class="track-thumbnail2" data-bs-target="#carouselExample2" data-bs-slide-to="13">
+                                    <img src="image/work/mnp (13).jpg" class="img-thumbnail" alt="Thumbnail 12">
+                                </div>
+                                <div class="track-thumbnail2" data-bs-target="#carouselExample2" data-bs-slide-to="14">
+                                    <img src="image/work/mnp (14).jpg" class="img-thumbnail" alt="Thumbnail 12">
+                                </div>
+                            </div>
                         </div><br>
                     </div>
                     <div class="col-xs-12 col-md-4">
@@ -420,9 +525,11 @@
                         <div id="carouselExample3" class="carousel slide">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="image/work/ilc (1).png" class="d-block w-100" alt="...">
+                                    <img src="image/work/ilc (11).png" class="d-block w-100" alt="...">
                                 </div>
-                                
+                                <div class="carousel-item active">
+                                    <img src="image/work/ilc (12).png" class="d-block w-100" alt="...">
+                                </div>
                                 <div class="carousel-item responsive-iframe-container">
                                     <iframe src="https://www.youtube.com/embed/rIBEKasqjOk?si=40v1i3ZQaM3Vz_GY" title="YouTube video player" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -464,6 +571,46 @@
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
                             </button>
+                        </div>
+                        <div class="carousel-track-wrapper3">
+                            <div class="carousel-track3">
+                                <div class="track-thumbnail3" data-bs-target="#carouselExample3" data-bs-slide-to="0">
+                                    <img src="image/work/ilc (11).png" class="img-thumbnail" alt="Thumbnail 1">
+                                </div>
+                                <div class="track-thumbnail3" data-bs-target="#carouselExample3" data-bs-slide-to="1">
+                                    <img src="image/work/ilc (12).png" class="img-thumbnail" alt="Thumbnail 2">
+                                </div>
+                                <div class="track-thumbnail3" data-bs-target="#carouselExample3" data-bs-slide-to="2">
+                                    <img src="https://via.placeholder.com/150" class="img-thumbnail" alt="Thumbnail 2">
+                                </div>
+                                <div class="track-thumbnail3" data-bs-target="#carouselExample3" data-bs-slide-to="3">
+                                    <img src="image/work/ilc (8).png" class="img-thumbnail" alt="Thumbnail 4">
+                                </div>
+                                <div class="track-thumbnail3" data-bs-target="#carouselExample3" data-bs-slide-to="4">
+                                    <img src="image/work/ilc (4).png" class="img-thumbnail" alt="Thumbnail 5">
+                                </div>
+                                <div class="track-thumbnail3" data-bs-target="#carouselExample3" data-bs-slide-to="5">
+                                    <img src="image/work/ilc (3).png" class="img-thumbnail" alt="Thumbnail 6">
+                                </div>
+                                <div class="track-thumbnail3" data-bs-target="#carouselExample3" data-bs-slide-to="6">
+                                    <img src="image/work/ilc (10).png" class="img-thumbnail" alt="Thumbnail 7">
+                                </div>
+                                <div class="track-thumbnail3" data-bs-target="#carouselExample3" data-bs-slide-to="7">
+                                    <img src="image/work/ilc (7).png" class="img-thumbnail" alt="Thumbnail 8">
+                                </div>
+                                <div class="track-thumbnail3" data-bs-target="#carouselExample3" data-bs-slide-to="8">
+                                    <img src="image/work/ilc (2).png" class="img-thumbnail" alt="Thumbnail 9">
+                                </div>
+                                <div class="track-thumbnail3" data-bs-target="#carouselExample3" data-bs-slide-to="9">
+                                    <img src="image/work/ilc (6).png" class="img-thumbnail" alt="Thumbnail 10">
+                                </div>
+                                <div class="track-thumbnail3" data-bs-target="#carouselExample3" data-bs-slide-to="10">
+                                    <img src="image/work/ilc (9).png" class="img-thumbnail" alt="Thumbnail 11">
+                                </div>
+                                <div class="track-thumbnail3" data-bs-target="#carouselExample3" data-bs-slide-to="11">
+                                    <img src="image/work/ilc (1).png" class="img-thumbnail" alt="Thumbnail 12">
+                                </div>
+                            </div>
                         </div><br>
                     </div>
                     <div class="col-xs-12 col-md-4">

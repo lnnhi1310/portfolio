@@ -15,7 +15,6 @@
     <script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
     <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
     <style>
-        
         .container-fluid {
             position: relative; /* Makes absolute positioning work */
             margin-top: -17%;
@@ -41,22 +40,17 @@
         .wiggle {
             width: 10vw;
             max-width: 100%;
-            object-fit: contain;
             transition: transform 0.2s ease-in-out;
             animation: wiggle 4s infinite ease-in-out;
-        }
-
-        .ot {
-            animation: none;
-            margin-top: -4.5vh;
         }
 
         .wiggle:hover {
             transform: rotate(-3deg) translateY(-5px);
             animation: none;
         }
+
         @media (max-width: 1800px) {
-            .wiggle-container {
+        .wiggle-container {
             top: -13vh; /* Aligns the images vertically */
             gap: 40px; /* Spacing between images */
         }
@@ -123,7 +117,6 @@
             width: 16vw; /* Image size */
         }
         }
-
     </style>
 </head>
 
