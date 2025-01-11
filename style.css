@@ -334,6 +334,47 @@ img.symPhone {
   width: 100%;
   height: 100%;
 }
+/*work*/
+/* Styling the tracker and thumbnails */
+.carousel-track-wrapper, .carousel-track-wrapper2, .carousel-track-wrapper3 {
+  overflow: hidden;
+  margin-top: 15px;
+  position: relative;
+}
+
+.carousel-track, .carousel-track2, .carousel-track3 {
+  display: flex;
+  gap: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.track-thumbnail, .track-thumbnail2, .track-thumbnail3 {
+  flex: 0 0 auto;
+  cursor: pointer;
+}
+
+.track-thumbnail img, .track-thumbnail2 img, .track-thumbnail3 img {
+  width: 160px;
+  height: 90px;
+  object-fit: cover;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.track-thumbnail img.active-thumb, .track-thumbnail2 img.active-thumb, .track-thumbnail3 img.active-thumb {
+  border-color: #007bff;
+}
+
+/* Hide scrollbar */
+.carousel-track::-webkit-scrollbar, .carousel-track2::-webkit-scrollbar, .carousel-track3::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track, .carousel-track2, .carousel-track3 {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 
 @media (max-width: 1200px) {
   h3 {
@@ -388,47 +429,22 @@ img.symPhone {
   .iconfoot{
     margin-top: 10px;
     text-align: left;
+
+
+
   }
-}
+  .carousel-track-wrapper, .carousel-track-wrapper2, .carousel-track-wrapper3 {
+    margin-top: 10px;
+  }
+  
+  .carousel-track, .carousel-track2, .carousel-track3 {
+    display: flex;
+    gap: 5px;
+    transition: transform 0.3s ease-in-out;
+  }
 
-/*work*/
-/* Styling the tracker and thumbnails */
-/* Styling the tracker and thumbnails */
-.carousel-track-wrapper, .carousel-track-wrapper2, .carousel-track-wrapper3 {
-  overflow: hidden;
-  margin-top: 15px;
-  position: relative;
-}
-
-.carousel-track, .carousel-track2, .carousel-track3 {
-  display: flex;
-  gap: 10px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.track-thumbnail, .track-thumbnail2, .track-thumbnail3 {
-  flex: 0 0 auto;
-  cursor: pointer;
-}
-
-.track-thumbnail img, .track-thumbnail2 img, .track-thumbnail3 img {
-  width: 160px;
-  height: 90px;
-  object-fit: cover;
-  border: 2px solid transparent;
-  transition: border-color 0.3s ease;
-}
-
-.track-thumbnail img.active-thumb, .track-thumbnail2 img.active-thumb, .track-thumbnail3 img.active-thumb {
-  border-color: #007bff;
-}
-
-/* Hide scrollbar */
-.carousel-track::-webkit-scrollbar, .carousel-track2::-webkit-scrollbar, .carousel-track3::-webkit-scrollbar {
-  display: none;
-}
-
-.carousel-track, .carousel-track2, .carousel-track3 {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  .track-thumbnail img, .track-thumbnail2 img, .track-thumbnail3 img {
+    width: 64px;
+    height: 36px;
+  }
 }
