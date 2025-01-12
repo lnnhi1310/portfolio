@@ -21,7 +21,9 @@
         const carousels = [
             { id: '#carouselExample1', trackClass: '.carousel-track', thumbnailClass: '.track-thumbnail img', trackWrapperClass: '.carousel-track-wrapper' },
             { id: '#carouselExample2', trackClass: '.carousel-track2', thumbnailClass: '.track-thumbnail2 img', trackWrapperClass: '.carousel-track-wrapper2' },
-            { id: '#carouselExample3', trackClass: '.carousel-track3', thumbnailClass: '.track-thumbnail3 img', trackWrapperClass: '.carousel-track-wrapper3' }
+            { id: '#carouselExample3', trackClass: '.carousel-track3', thumbnailClass: '.track-thumbnail3 img', trackWrapperClass: '.carousel-track-wrapper3' },
+            { id: '#carouselExample4', trackClass: '.carousel-track4', thumbnailClass: '.track-thumbnail4 img', trackWrapperClass: '.carousel-track-wrapper4' },
+            { id: '#carouselExample5', trackClass: '.carousel-track5', thumbnailClass: '.track-thumbnail5 img', trackWrapperClass: '.carousel-track-wrapper5' }
         ];
     
         carousels.forEach((carouselData, index) => {
@@ -100,6 +102,35 @@
     
             track.addEventListener('transitionend', () => {
                 track.style.transition = '';
+            });
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // Select all elements with the 'wiggle' class
+        const wiggleElements = document.querySelectorAll('.wiggle');
+        const soundToggleButton = document.getElementById('sound-toggle-btn');
+        let soundEnabled = true;  // State to track if sound is on or off
+    
+        // Function to toggle sound on and off
+        function toggleSound() {
+            soundEnabled = !soundEnabled;  // Toggle the state
+            soundToggleButton.textContent = soundEnabled ? 'Sound ON' : 'Sound OFF';  // Update button text
+        }
+    
+        // Add event listener to the sound toggle button
+        soundToggleButton.addEventListener('click', toggleSound);
+    
+        // Add event listener for hover on each wiggle element
+        wiggleElements.forEach((element) => {
+            element.addEventListener('mouseenter', () => {
+                if (soundEnabled) {  // Play sound only if sound is enabled
+                    const soundFile = element.getAttribute('data-sound');
+                    if (soundFile) {
+                        const audio = new Audio(`FILE/${soundFile}`);
+                        audio.play();  // Play the sound
+                    }
+                }
             });
         });
     });

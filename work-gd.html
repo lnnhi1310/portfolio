@@ -153,10 +153,10 @@
         </svg>
         <!-- Wiggle images -->
         <div class="wiggle-container">
-            <img src="image/graphic1.png" class="gd wiggle">
-            <a href="work-an.html"><img src="image/animation.png" class="an wiggle" style="padding-top: 5px;"></a>
-            <a href="work-dd.html"><img src="image/2d3d.png" class="dd wiggle" style="padding-top: 5px;"></a>
-            <a href="work-ot.html"><img src="image/other.png" class="ot wiggle"></a>
+            <img src="image/graphic1.png" class="gd wiggle" data-sound="do.wav">
+            <a href="work-an.html"><img src="image/animation.png" class="an wiggle" style="padding-top: 5px;" data-sound="re.wav"></a>
+            <a href="work-dd.html"><img src="image/2d3d.png" class="dd wiggle" style="padding-top: 5px;" data-sound="mi.wav"></a>
+            <a href="work-ot.html"><img src="image/other.png" class="ot wiggle" data-sound="fa.wav"></a>
         </div>
     </div>
 
@@ -258,20 +258,13 @@
                     <div class="col-xs-12 col-md-4">
                         <span id="closeOverlay1" class="close-icon">&times;</span>
                         <div class="divtag">
-                            <p class="tag">School Project</p>
-                            <p class="tag">3D</p>
+                            <p class="tag">Poster/Banner</p>
                         </div>
-                        <h2>⊹ ࣪ ˖WHISPER OF THE FAIRY DRAGON</h2><hr>
-                        <div class="holder">
-                            <h4>Team</h4>
-                            <p>Lý Ngọc Nhi <br> Trần Đỗ Quỳnh Anh <br> Nguyễn Ngọc Huỳnh Nam</p>
-                        </div>
+                        <h2>⊹ ࣪ ˖Rosé-VNFC Works Collection</h2><hr>
                         <div class="holder">
                             <h4>Description</h4>
-                            <p>In this ambitious project, our goal is to craft a captivating short 3D animation that vividly depicts the diverse tapestry of Vietnamese history, 
-                                art, and cultural across three distinct eras. We plan to employ 3D printing technology to provide audiences with a truly immersive 
-                                experience, allowing them to not only witness but also collect intricate 3D figures inspired by Vietnamese culture, turning this endeavor into 
-                                both an educational journey and a deligthful collecting experience. </p>
+                            <p>A variety of event designs and banners were created by Nhi while working as a graphic designer for Rosé-VNFC.
+                                These designs helped enhance the visual identity of the brand and played a crucial role in promoting their events.</p>
                         </div>
                     </div>
                 </div>
@@ -411,23 +404,3 @@
     </div>
 </body>
 </html>
-
-<script>
-    function setupOverlay(openId, overlayId, closeId) {
-    const openButton = document.getElementById(openId);
-    const overlay = document.getElementById(overlayId);
-    const closeButton = document.getElementById(closeId);
-
-    if (openButton && overlay && closeButton) {
-        openButton.addEventListener('click', () => overlay.style.display = 'flex');
-        closeButton.addEventListener('click', () => overlay.style.display = 'none');
-    } else {
-        console.warn(`Missing element(s) for IDs: ${openId}, ${overlayId}, ${closeId}`);
-    }
-}
-
-// Set up all overlays
-setupOverlay('openOverlay1', 'overlay1', 'closeOverlay1');
-setupOverlay('openOverlay2', 'overlay2', 'closeOverlay2');
-setupOverlay('openOverlay3', 'overlay3', 'closeOverlay3');
-</script>

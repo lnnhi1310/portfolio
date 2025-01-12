@@ -154,10 +154,10 @@
         </svg>
         <!-- Wiggle images -->
         <div class="wiggle-container">
-            <a href="work-gd.html"><img src="image/graphic.png" class="gd wiggle"></a>
-            <a href="work-an.html"><img src="image/animation.png" class="an wiggle" style="padding-top: 5px;"></a>
-            <a href="work-dd.html"><img src="image/2d3d.png" class="dd wiggle" style="padding-top: 5px;"></a>
-            <img src="image/other1.png" class="ot wiggle">
+            <a href="work-gd.html"><img src="image/graphic.png" class="gd wiggle" data-sound="do.wav"></a>
+            <a href="work-an.html"><img src="image/animation.png" class="an wiggle" style="padding-top: 5px;" data-sound="re.wav"></a>
+            <a href="work-dd.html"><img src="image/2d3d.png" class="dd wiggle" style="padding-top: 5px;" data-sound="mi.wav"></a>
+            <img src="image/other1.png" class="ot wiggle" data-sound="fa.wav">
         </div>
     </div>
 
@@ -983,53 +983,3 @@
     </div>
 </body>
 </html>
-
-<script>
-    //Overlay 1
-    // Get the elements
-    const overlay1 = document.getElementById('overlay1');
-    const openOverlay1 = document.getElementById('openOverlay1');
-    const closeOverlay1 = document.getElementById('closeOverlay1');
-
-    // Open the overlay when the image is clicked
-    openOverlay1.addEventListener('click', function() {
-    overlay1.style.display = 'flex';
-    });
-
-    // Close the overlay when the image is clicked
-    closeOverlay1.addEventListener('click', function() {
-    overlay1.style.display = 'none';
-    });
-
-        //Overlay 2
-    // Get the elements
-    const overlay2 = document.getElementById('overlay2');
-    const openOverlay2 = document.getElementById('openOverlay2');
-    const closeOverlay2 = document.getElementById('closeOverlay2');
-
-    // Open the overlay when the image is clicked
-    openOverlay2.addEventListener('click', function() {
-    overlay2.style.display = 'flex';
-    });
-
-    // Close the overlay when the image is clicked
-    closeOverlay2.addEventListener('click', function() {
-    overlay2.style.display = 'none';
-    });
-
-        //Overlay 3
-    // Get the elements
-    const overlay3 = document.getElementById('overlay3');
-    const openOverlay3 = document.getElementById('openOverlay3');
-    const closeOverlay3 = document.getElementById('closeOverlay3');
-
-    // Open the overlay when the image is clicked
-    openOverlay3.addEventListener('click', function() {
-    overlay3.style.display = 'flex';
-    });
-
-    // Close the overlay when the image is clicked
-    closeOverlay3.addEventListener('click', function() {
-    overlay3.style.display = 'none';
-    });
-</script>
