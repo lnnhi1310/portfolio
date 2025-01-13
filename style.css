@@ -253,12 +253,21 @@ img.symPhone {
   margin-bottom: 20px;
   transition: transform 0.3s ease-in-out;
   border: #E0F2F4;
-  border-radius: 20px;
   height: fit-content;
 }
 
 .trigger:hover {
   transform: translateY(-10px);
+}
+
+.filtered-image {
+  width: 100%;
+  filter: grayscale(100%) hue-rotate(-50deg);
+  transition: filter 0.3s ease-in-out;
+}
+
+.trigger:hover .filtered-image {
+  filter: grayscale(0%) hue-rotate(0deg);
 }
 
   /* Overlay styles */
@@ -276,7 +285,7 @@ img.symPhone {
   }
 
 .overlay-content {
-  background-color: #E0F2F4;
+  background-color: white;
   width: 80%;
   height: 80%;
   padding: 40px; /* Adds padding for better content spacing */
@@ -321,7 +330,7 @@ img.symPhone {
 .carousel-control-prev, 
 .carousel-control-next {
   border: none;  /* Remove the default border */
-  width: 20%;
+  width: 10%;
   height: 70%;
 }
 
@@ -417,7 +426,7 @@ img.symPhone {
     font-size: 20px;
   }
   p {
-    font-size: 6px;
+    font-size: 14px;
   }
 
   .tag {

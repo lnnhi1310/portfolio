@@ -110,28 +110,40 @@
     });
 
     document.addEventListener('DOMContentLoaded', () => {
-        // Select all elements with the 'wiggle' class
-        const wiggleElements = document.querySelectorAll('.wiggle');
         const soundToggleButton = document.getElementById('sound-toggle-btn');
-        let soundEnabled = true;  // State to track if sound is on or off
+        const wiggleElements = document.querySelectorAll('.wiggle');
+        let soundEnabled = JSON.parse(localStorage.getItem('soundEnabled')) ?? true; // Default to true if not set
+    
+        // Update the button text based on the saved state
+        function updateButtonText() {
+            soundToggleButton.textContent = soundEnabled ? '🔊' : '🔈';
+        }
     
         // Function to toggle sound on and off
         function toggleSound() {
-            soundEnabled = !soundEnabled;  // Toggle the state
-            soundToggleButton.textContent = soundEnabled ? 'Sound ON' : 'Sound OFF';  // Update button text
+            soundEnabled = !soundEnabled; // Toggle state
+            localStorage.setItem('soundEnabled', JSON.stringify(soundEnabled)); // Save state
+            updateButtonText(); // Update button text
         }
     
-        // Add event listener to the sound toggle button
+        // Add click event to the sound toggle button
         soundToggleButton.addEventListener('click', toggleSound);
+    
+        // Update button text on page load
+        updateButtonText();
     
         // Add event listener for hover on each wiggle element
         wiggleElements.forEach((element) => {
             element.addEventListener('mouseenter', () => {
-                if (soundEnabled) {  // Play sound only if sound is enabled
+                console.log('Hovering:', element);
+                if (soundEnabled) {
                     const soundFile = element.getAttribute('data-sound');
+                    console.log('Sound File:', soundFile);
                     if (soundFile) {
-                        const audio = new Audio(`FILE/${soundFile}`);
-                        audio.play();  // Play the sound
+                        const audio = new Audio(`file/${soundFile}`);
+                        audio.play().catch((error) => console.error('Audio Play Error:', error));
+                    } else {
+                        console.error('No data-sound attribute found.');
                     }
                 }
             });
