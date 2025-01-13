@@ -15,6 +15,9 @@
     setupOverlay('openOverlay1', 'overlay1', 'closeOverlay1');
     setupOverlay('openOverlay2', 'overlay2', 'closeOverlay2');
     setupOverlay('openOverlay3', 'overlay3', 'closeOverlay3');
+    setupOverlay('openOverlay4', 'overlay4', 'closeOverlay4');
+    setupOverlay('openOverlay5', 'overlay5', 'closeOverlay5');
+    setupOverlay('openOverlay6', 'overlay6', 'closeOverlay6');
 
    
     document.addEventListener('DOMContentLoaded', () => {
