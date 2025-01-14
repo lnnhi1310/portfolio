@@ -19,14 +19,12 @@
     setupOverlay('openOverlay5', 'overlay5', 'closeOverlay5');
     setupOverlay('openOverlay6', 'overlay6', 'closeOverlay6');
 
-   
     document.addEventListener('DOMContentLoaded', () => {
         const carousels = [
             { id: '#carouselExample1', trackClass: '.carousel-track', thumbnailClass: '.track-thumbnail img', trackWrapperClass: '.carousel-track-wrapper' },
             { id: '#carouselExample2', trackClass: '.carousel-track2', thumbnailClass: '.track-thumbnail2 img', trackWrapperClass: '.carousel-track-wrapper2' },
             { id: '#carouselExample3', trackClass: '.carousel-track3', thumbnailClass: '.track-thumbnail3 img', trackWrapperClass: '.carousel-track-wrapper3' },
             { id: '#carouselExample4', trackClass: '.carousel-track4', thumbnailClass: '.track-thumbnail4 img', trackWrapperClass: '.carousel-track-wrapper4' },
-            { id: '#carouselExample5', trackClass: '.carousel-track5', thumbnailClass: '.track-thumbnail5 img', trackWrapperClass: '.carousel-track-wrapper5' }
         ];
     
         carousels.forEach((carouselData, index) => {
