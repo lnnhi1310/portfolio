@@ -247,7 +247,7 @@ img.symPhone {
 /* Click overlay */
 .trigger {
   display: inline-block;
-  padding: 40px 40px;
+  padding: 30px 30px;
   background-color:  rgba(255, 255, 255, 0.75);
   color: white;
   cursor: pointer;
@@ -398,10 +398,11 @@ img.symPhone {
   h3 {
     font-size: 20px;
   }
+
   .tag {
     font-size: 14px;
     padding: 5px 16px;
-    border-radius: 20px;
+
   }
 
   .holder p {
@@ -431,8 +432,7 @@ img.symPhone {
 
   .tag {
     font-size: 12px;
-    padding: 5px 16px;
-    border-radius: 20px;
+    padding: 4px 12px;
   }
 
   .divtag {

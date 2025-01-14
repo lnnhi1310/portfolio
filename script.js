@@ -149,3 +149,20 @@
             });
         });
     });
+
+        // Function to open the overlay based on the URL fragment
+        window.onload = function () {
+            const hash = window.location.hash; // Get the hash from the URL
+            if (hash) {
+                const overlay = document.querySelector(hash); // Find the overlay by ID
+                if (overlay) {
+                    overlay.style.display = "flex"; // Show the overlay
+                }
+            }
+        };
+    
+        // Function to close the overlay
+        function closeOverlay() {
+            const overlays = document.querySelectorAll(".overlay");
+            overlays.forEach(overlay => overlay.style.display = "none");
+        }
