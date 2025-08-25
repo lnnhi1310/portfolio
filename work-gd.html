@@ -128,6 +128,8 @@
         </ul>
     </nav>
 
+    <div id="carousel-placeholder"></div>
+
     <!-- Greeting -->
     <div class="marquee">
         <div class="marquee-content">
@@ -713,3 +715,11 @@
     </div>
 </body>
 </html>
+
+<script>
+    fetch("carouselslide.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("carousel-placeholder").innerHTML = data;
+    });
+</script>
