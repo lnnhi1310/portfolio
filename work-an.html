@@ -120,13 +120,7 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">about</a></li>
-            <img src="image/logo.svg" style="height: 60px;">
-            <li><a href="work-gd.html">work</a></li>
-        </ul>
-    </nav>
+    <div id="nav-placeholder"></div>
 
     <div id="carousel-placeholder"></div>
 
@@ -636,7 +630,7 @@
     </div>
     
     <!-- Footer -->
-    <div id="foot-placeholder"></div>
+    <div id="footer-placeholder"></div>
 </body>
 
 <script>
@@ -649,7 +643,13 @@
     fetch("foot.html")
     .then(res => res.text())
     .then(data => {
-      document.getElementById("foot-placeholder").innerHTML = data;
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+
+    fetch("nav.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("nav-placeholder").innerHTML = data;
     });
 </script>
 </html>
